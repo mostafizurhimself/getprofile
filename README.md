@@ -1,3 +1,3 @@
-# Portfolio application
+# Get Profile
 
-A quick description of your portfolio application
+Personal Portfolio Website with Strapi Admin Panel
