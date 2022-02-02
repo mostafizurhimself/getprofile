@@ -1,8 +1,14 @@
 import type { NextPage } from 'next'
+import AppLayout from '@/layouts/AppLayout'
+import HeroSection from '@/components/partials/HeroSection'
+import AboutSection from '@/components/partials/AboutSection'
 
 const Home: NextPage = () => {
   return (
-    <div>Tailwind CSS added</div>
+    <AppLayout title="Home">
+      <HeroSection />
+      <AboutSection />
+    </AppLayout>
   )
 }
 
