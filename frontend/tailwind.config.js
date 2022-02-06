@@ -1,9 +1,15 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': '475px',
+      ...defaultTheme.screens,
+    },
     extend: {
       fontFamily: {
         sans: ["Rubik", "sans-sarif"]
@@ -21,6 +27,9 @@ module.exports = {
           "800": "#b33543",
           "900": "#992e3a"
         },
+        indigo: {
+          "overlay": "rgba(99,102,241, 0.8)"
+        }
       },
     },
   },

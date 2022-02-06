@@ -25,7 +25,7 @@ const HeroSection = (props: Props) => {
                     <Dribbble className='mx-3' />
                     <GitHub className='mx-3' />
                 </div>
-                <Button className='px-8 bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-200 text-white font-semibold tracking-wider mt-5'>
+                <Button className='px-8 bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-200 text-white font-semibold mt-5'>
                     Hire Me
                 </Button>
             </div>
