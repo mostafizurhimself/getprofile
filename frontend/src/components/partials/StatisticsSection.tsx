@@ -8,7 +8,7 @@ type Props = {};
 
 const StatisticsSection = (props: Props) => {
   return (
-    <div className="py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+    <div className="container py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
       <div className="flex">
         <div className="text-gray-300 mr-5">
           <Fire className="h-10" />

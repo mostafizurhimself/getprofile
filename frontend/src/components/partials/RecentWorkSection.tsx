@@ -1,19 +1,17 @@
 import Image from "next/image";
 import React from "react";
-import DotBg from "./DotBg";
 import styles from "@/styles/modules/Portfolio.module.scss";
 import Link from "next/link";
 import { Link as LinkIcon } from "react-feather";
+import Button from "../form/Button";
+import SectionTitle from "../shared/SectionTitle";
 
 type Props = {};
 
 const RecentWorkSection = (props: Props) => {
   return (
-    <div className="py-16">
-      <div className="relative">
-        <DotBg className="h-8 w-8 absolute bottom-5" />
-        <h3 className="text-4xl font-bold pl-3">Recent Works</h3>
-      </div>
+    <div className="container py-16">
+      <SectionTitle>Recent Works</SectionTitle>
       <div className="mt-10 grid xs:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
         <div className={styles["portfolio"]}>
           <Image src="/images/food-delivery.png" height={260} width={260} />
@@ -111,6 +109,12 @@ const RecentWorkSection = (props: Props) => {
             </Link>
           </div>
         </div>
+      </div>
+
+      <div className="mt-6 flex justify-center">
+        <Button className="px-8 bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-200 text-white font-semibold mt-5">
+          View All
+        </Button>
       </div>
     </div>
   );

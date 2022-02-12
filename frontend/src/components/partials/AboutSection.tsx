@@ -1,17 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import Button from "@/components/form/Button";
-import DotBg from "./DotBg";
+import SectionTitle from "../shared/SectionTitle";
 
 interface Props {}
 
 const AboutSection = (props: Props) => {
   return (
-    <div className="py-6">
-      <div className="relative">
-        <DotBg className="h-8 w-8 absolute bottom-5" />
-        <h3 className="text-4xl font-bold pl-3">About Me</h3>
-      </div>
+    <div className="container py-6">
+      <SectionTitle>About Me</SectionTitle>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 py-6">
         <div className="overflow-hidden text-center md:text-left">
           <Image
@@ -24,9 +21,9 @@ const AboutSection = (props: Props) => {
         <div className="col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl shadow-lg">
           <div>
             <p className="text-justify">
-              I am Bolby Doe, web developer from London, United Kingdom. I have
-              rich experience in web site design and building and customization,
-              also I am good at WordPress.
+              Hi, I am Md Mostafizur Rahman, fullstack developer from Dhaka,
+              Bangladesh. I have rich experience in building & customizing
+              website, web apps, mobile apps etc, I am also good at Design.
             </p>
             <Button className="px-8 bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-200 text-white font-semibold mt-5">
               Download CV

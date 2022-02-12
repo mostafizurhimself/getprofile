@@ -6,6 +6,9 @@ import StatisticsSection from "@/components/partials/StatisticsSection";
 import ServiceSection from "@/components/partials/ServiceSection";
 import ExperienceSection from "@/components/partials/ExperienceSection";
 import RecentWorkSection from "@/components/partials/RecentWorkSection";
+import TestimonialSection from "@/components/partials/TestimonialSection";
+import BlogSection from "@/components/partials/BlogSection";
+import ContactSection from "@/components/partials/ContactSection";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +19,9 @@ const Home: NextPage = () => {
       <ExperienceSection />
       <ServiceSection />
       <RecentWorkSection />
+      <TestimonialSection />
+      <BlogSection />
+      <ContactSection />
     </AppLayout>
   );
 };

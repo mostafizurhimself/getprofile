@@ -1,19 +1,16 @@
 import React from "react";
 import AcademicCap from "../icons/AcademicCap";
-import DotBg from "./DotBg";
 import styles from "@/styles/modules/ExperienceSection.module.scss";
 import { Briefcase } from "react-feather";
+import SectionTitle from "../shared/SectionTitle";
 
 type Props = {};
 
 const ExperienceSection = (props: Props) => {
   return (
-    <div className="py-16">
-      <div className="relative">
-        <DotBg className="h-8 w-8 absolute bottom-5" />
-        <h3 className="text-4xl font-bold pl-3">Experience</h3>
-      </div>
-      <div className="py-15 grid sm:grid-cols-2 mt-10 gap-4 md:gap-8">
+    <div className="container py-16">
+      <SectionTitle>Experiences</SectionTitle>
+      <div className="py-15 grid md:grid-cols-2 mt-10 gap-8">
         {/* Experience */}
         <div>
           <div className="bg-white rounded-2xl shadow-lg px-10 py-8">
