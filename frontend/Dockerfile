@@ -4,10 +4,11 @@ FROM node:16.3.0-alpine
 WORKDIR /app
 
 #Copy new files or directories into the filesystem of the container
-COPY package*.json /app/
+COPY package.json .
+COPY yarn.lock .
 
 #Execute commands in a new layer on top of the current image and commit the results
-RUN npm install
+RUN yarn install
 
 # Running the app
-CMD "npm" "run" "dev"
+CMD "yarn" "dev"

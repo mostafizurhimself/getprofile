@@ -1,0 +1,21 @@
+.post {
+      @apply bg-white shadow-lg rounded-2xl overflow-hidden transform transition-transform duration-500;
+
+      &:hover {
+            @apply -translate-y-3;
+      }
+
+      &-image {
+            @apply block relative h-64;
+
+            img {
+                  @apply transform transition-transform duration-300;
+            }
+
+            &:hover {
+                  img {
+                        @apply scale-110;
+                  }
+            }
+      }
+}

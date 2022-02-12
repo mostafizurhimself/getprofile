@@ -1,0 +1,11 @@
+.experience {
+      @apply relative border-l border-gray-200;
+
+      &-item {
+            @apply ml-6;
+      }
+
+      &-item:not(:last-child) {
+            @apply mb-10;
+      }
+}
