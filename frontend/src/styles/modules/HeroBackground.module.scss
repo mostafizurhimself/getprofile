@@ -15,7 +15,7 @@
   width: 20px;
   height: 20px;
   animation: animate 25s linear infinite;
-  bottom: -150px;
+  bottom: -100px;
 }
 
 .circles li:nth-child(1) {
@@ -66,6 +66,7 @@
   width: 110px;
   height: 110px;
   animation-delay: 3s;
+  bottom: -150px;
 }
 
 .circles li:nth-child(7) {
@@ -74,6 +75,7 @@
   width: 150px;
   height: 150px;
   animation-delay: 7s;
+  bottom: -150px;
 }
 
 .circles li:nth-child(8) {
@@ -101,6 +103,7 @@
   height: 150px;
   animation-delay: 0s;
   animation-duration: 11s;
+  bottom: -150px;
 }
 
 @keyframes animate {

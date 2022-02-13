@@ -21,7 +21,7 @@ const PageTitle: React.FunctionComponent<Props> = ({
       <div className="flex uppercase text-sm">
         {breadcrumb.map((item, index) => {
           return (
-            <>
+            <div key={index}>
               {item.path && (
                 <Link href={item.path}>
                   <a className="">{item.label}</a>
@@ -35,7 +35,7 @@ const PageTitle: React.FunctionComponent<Props> = ({
               {index !== breadcrumb.length - 1 && (
                 <span className="px-2 text-primary-500">/</span>
               )}
-            </>
+            </div>
           );
         })}
       </div>

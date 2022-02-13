@@ -30,7 +30,7 @@ const work = () => {
               <h3 className={styles["portfolio-title"]}>
                 Food Delivery System & Ecommerce
               </h3>
-              <Link href="/">
+              <Link href="works/1">
                 <a className={styles["portfolio-link"]}>
                   <LinkIcon className="h-5 text-white" />
                 </a>

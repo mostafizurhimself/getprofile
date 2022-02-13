@@ -8,7 +8,7 @@ interface Props {}
 
 const HeroSection = (props: Props) => {
   return (
-    <div className="hero relative flex items-center justify-center">
+    <div className="hero relative flex items-center justify-center -mt-16">
       <HeroBackground />
       <div className="flex flex-col items-center">
         <div className="rounded-full overflow-hidden">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Button from "../form/Button";
 import SectionTitle from "../shared/SectionTitle";
 
 type Props = {};
@@ -41,6 +42,11 @@ const ContactSection = (props: Props) => {
               placeholder="Message"
               rows={5}
             ></textarea>
+          </div>
+          <div className="mt-8">
+            <Button className="px-8 bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-200 text-white font-semibold mt-5">
+              Send Message
+            </Button>
           </div>
         </div>
       </div>

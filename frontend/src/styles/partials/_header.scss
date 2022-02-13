@@ -1,8 +1,5 @@
 .header {
-  // position: fixed;
-  background-color: transparent;
-  width: 100%;
-  z-index: 1000;
+  @apply absolute top-0 bg-transparent w-full z-10;
 }
 
 .icon-scroll,

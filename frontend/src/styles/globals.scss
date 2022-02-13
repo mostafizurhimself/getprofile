@@ -13,13 +13,18 @@ body {
 }
 
 .hero {
-  height: calc(100vh - 70px);
+  @apply h-screen;
+  min-height: 800px;
 }
 
 .container {
   @apply max-w-xl md:max-w-4xl lg:max-w-7xl mx-auto px-6;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  @apply text-gray-300;
+}
 .slick-dots {
   li {
     @apply m-0;

@@ -1,12 +1,9 @@
 import React from "react";
 
-type Props = {};
-
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
-    <footer className="text-center py-6 text-gray-500">
-      {" "}
-      &#169; 2022 Mostafizur Rahman.
+    <footer className="container mt-auto text-center py-6 border-t text-gray-500">
+      Copyright &#169; {new Date().getFullYear()}. Md Mostafizur Rahman.
     </footer>
   );
 };

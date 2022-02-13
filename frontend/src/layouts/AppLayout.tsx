@@ -16,7 +16,7 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
       <Head>
         <title>Mostafizur | {title}</title>
       </Head>
-      <div>
+      <div className="flex flex-col min-h-screen">
         <ScrollToTop
           smooth
           component={
@@ -26,7 +26,7 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
           }
         />
         <Menu />
-        <div className="text-gray-700">{children}</div>
+        <div className="text-gray-700 mt-16">{children}</div>
         <Footer />
       </div>
     </>
