@@ -9,6 +9,7 @@ import RecentWorkSection from "@/components/partials/RecentWorkSection";
 import TestimonialSection from "@/components/partials/TestimonialSection";
 import BlogSection from "@/components/partials/BlogSection";
 import ContactSection from "@/components/partials/ContactSection";
+// import lodash from "lodash";
 
 const Home: NextPage = () => {
   return (

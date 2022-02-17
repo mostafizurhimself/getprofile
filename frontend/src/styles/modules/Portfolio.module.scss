@@ -1,37 +1,37 @@
 .portfolio {
-      @apply bg-white rounded-2xl shadow-lg text-center relative overflow-hidden;
+  @apply bg-white rounded-2xl shadow-lg text-center relative overflow-hidden;
 
-      &:hover .portfolio-overlay {
-            @apply opacity-100;
+  &:hover .portfolio-overlay {
+    @apply opacity-100;
+  }
+
+  &-category {
+    @apply inline-block text-white text-sm bg-primary-500 whitespace-nowrap max-w-min px-4 py-2 rounded-b-lg transform opacity-90 -translate-y-full transition-all duration-300 ease-out;
+  }
+
+  &-title {
+    @apply text-white font-semibold text-xl mt-auto w-3/4 transform translate-y-full opacity-0 transition-all ease-out duration-500 hover:underline;
+  }
+
+  &-link {
+    @apply bg-yellow-400 w-10 h-10 rounded-full mt-auto flex items-center justify-center opacity-0 transition-opacity duration-700;
+  }
+
+  &-overlay {
+    @apply text-left absolute h-full bg-indigo-overlay w-full top-0 left-0 px-8 pb-8 flex flex-col opacity-0 transition-opacity duration-500;
+
+    &:hover {
+      .portfolio-category {
+        @apply opacity-100 translate-y-0;
       }
 
-      &-category {
-            @apply inline-block text-white text-sm bg-primary-500 whitespace-nowrap max-w-min px-4 py-2 rounded-b-lg transform opacity-90 -translate-y-full transition-all duration-300 ease-out;
+      .portfolio-title {
+        @apply opacity-100 translate-y-0;
       }
 
-      &-title {
-            @apply text-white font-semibold text-xl mt-auto w-3/4 transform translate-y-full opacity-0 transition-all ease-out duration-500;
+      .portfolio-link {
+        @apply opacity-100;
       }
-
-      &-link {
-            @apply bg-yellow-400 w-10 h-10 rounded-full mt-auto flex items-center justify-center opacity-0 transition-opacity duration-700;
-      }
-
-      &-overlay {
-            @apply text-left absolute h-full bg-indigo-overlay w-full top-0 left-0 px-8 pb-8 flex flex-col opacity-0 transition-opacity duration-500;
-
-            &:hover {
-                  .portfolio-category {
-                        @apply opacity-100 translate-y-0;
-                  }
-
-                  .portfolio-title {
-                        @apply opacity-100 translate-y-0;
-                  }
-
-                  .portfolio-link {
-                        @apply opacity-100;
-                  }
-            }
-      }
+    }
+  }
 }

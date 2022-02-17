@@ -18,8 +18,8 @@ const WorkDetail = () => {
   return (
     <AppLayout title="Work Detail">
       <div className="container">
-        <div className="h-48 flex flex-col justify-center items-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
+        <div className="h-60 flex flex-col justify-center items-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center">
             Garments Management System
           </h1>
           <p className="flex items-center mt-4 text-gray-400">

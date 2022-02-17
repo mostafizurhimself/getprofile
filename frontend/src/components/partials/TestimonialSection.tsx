@@ -12,6 +12,7 @@ const reviewSettings: Settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: false,
+  arrows: false,
 };
 
 const clientSettings: Settings = {
@@ -21,6 +22,7 @@ const clientSettings: Settings = {
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
+  arrows: false,
 };
 
 const Testimonial = (props: Props) => {

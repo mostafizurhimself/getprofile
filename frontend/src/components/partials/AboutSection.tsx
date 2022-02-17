@@ -21,9 +21,9 @@ const AboutSection = (props: Props) => {
         <div className="col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl shadow-lg">
           <div>
             <p className="text-justify">
-              Hi, I am Md Mostafizur Rahman, fullstack developer from Dhaka,
-              Bangladesh. I have rich experience in building & customizing
-              website, web apps, mobile apps etc, I am also good at Design.
+              Hi, I am Md Mostafizur Rahman, I am a fullstack developer. I work
+              from Dhaka, Bangladesh. I have rich experience in building,
+              designing & customizing website, web apps, mobile apps etc.
             </p>
             <Button className="px-8 bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-200 text-white font-semibold mt-5">
               Download CV
