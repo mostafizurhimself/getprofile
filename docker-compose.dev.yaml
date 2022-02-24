@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  portfolio_website:
+    container_name: portfolio_website
+    ports:
+      - 3000:3000
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    env_file:
+      - ./frontend/.env.local
+    depends_on:
+      - portfolio_admin
+      - portfolio_db
+
+  portfolio_admin:
+    image: strapi/strapi
+    container_name: portfolio_admin
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: strapi
+      DATABASE_HOST: portfolio_db
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: strapi
+    volumes:
+      - ./backend:/srv/app
+    ports:
+      - '1337:1337'
+    depends_on:
+      - portfolio_db
+
+  portfolio_db:
+    image: postgres
+    container_name: portfolio_db
+    environment:
+      POSTGRES_DB: strapi
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+    volumes:
+      - ./data:/var/lib/postgresql/data
