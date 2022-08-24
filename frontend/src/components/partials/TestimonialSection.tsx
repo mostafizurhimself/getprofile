@@ -41,8 +41,10 @@ const Testimonial = (props: Props) => {
                 General Manager at Easy Fashion Ltd.
               </p>
               <div className="bg-white shadow-lg rounded-2xl max-w-2xl p-8 mt-6 text-gray-500">
-                I enjoy working with the theme and learn so much. You guys make
-                the process fun and interesting. Good luck! 🔥
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur labore similique quas fuga ad doloremque natus iste
+                modi numquam sapiente esse tenetur, ipsam, nisi vitae et vero,
+                ducimus dolorem est! Good luck! 🔥
               </div>
             </div>
           </div>
@@ -56,8 +58,10 @@ const Testimonial = (props: Props) => {
                 Project Manager at Sozashop
               </p>
               <div className="bg-white shadow-lg rounded-2xl max-w-2xl p-8 mt-6 text-gray-500">
-                I enjoy working with the theme and learn so much. You guys make
-                the process fun and interesting. Good luck! 🔥
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur labore similique quas fuga ad doloremque natus iste
+                modi numquam sapiente esse tenetur, ipsam, nisi vitae et vero,
+                ducimus dolorem est! Good luck! 🔥
               </div>
             </div>
           </div>
@@ -69,15 +73,17 @@ const Testimonial = (props: Props) => {
               <h6 className="font-semibold mt-3 text-lg">Rizwan Mirza</h6>
               <p className="text-gray-400 text-sm">Owner at Outchimp.inc</p>
               <div className="bg-white shadow-lg rounded-2xl max-w-2xl p-8 mt-6 text-gray-500">
-                I enjoy working with the theme and learn so much. You guys make
-                the process fun and interesting. Good luck! 🔥
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur labore similique quas fuga ad doloremque natus iste
+                modi numquam sapiente esse tenetur, ipsam, nisi vitae et vero,
+                ducimus dolorem est! Good luck! 🔥
               </div>
             </div>
           </div>
         </Slider>
       </div>
 
-      <div className="mt-16">
+      {/* <div className="mt-16">
         <Slider {...clientSettings}>
           <div className="text-center">
             <Image
@@ -120,7 +126,7 @@ const Testimonial = (props: Props) => {
             />
           </div>
         </Slider>
-      </div>
+      </div> */}
     </div>
   );
 };
