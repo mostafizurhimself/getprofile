@@ -10,7 +10,6 @@ interface Props {
 }
 
 const AppLayout: React.FC<Props> = ({ children, title }) => {
-  -6;
   return (
     <>
       <Head>

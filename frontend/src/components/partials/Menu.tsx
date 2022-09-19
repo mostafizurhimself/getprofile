@@ -15,7 +15,7 @@ const Menu = (props: Props) => {
       <div className="max-w-7xl mx-auto flex items-center px-4 md:px-6 h-16">
         <Link href="/">
           <a className="text-3xl  font-bold">
-            <span>GetProfile</span>
+            <span>Mostafizur</span>
             <span className="text-primary-500">.</span>
           </a>
         </Link>
@@ -130,7 +130,7 @@ const Menu = (props: Props) => {
                 <div className="px-2 border-b pb-4">
                   <Link href="/">
                     <a className="text-3xl  font-bold">
-                      <span>GetProfile</span>
+                      <span>Mostafizur</span>
                       <span className="text-primary-500">.</span>
                     </a>
                   </Link>
