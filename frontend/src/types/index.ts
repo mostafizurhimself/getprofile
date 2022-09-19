@@ -1,3 +1,5 @@
+import { Url } from "url";
+
 export type Experience = {
   jobTitle: string;
   company: string;
@@ -12,4 +14,10 @@ export type Education = {
   startDate: string;
   endDate: string;
   description: string;
+};
+
+export type Service = {
+  name: string;
+  description: string;
+  image: string;
 };

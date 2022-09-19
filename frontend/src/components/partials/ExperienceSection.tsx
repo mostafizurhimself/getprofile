@@ -63,7 +63,7 @@ const educations: Education[] = [
 const ExperienceSection = () => {
   return (
     <div className="container py-16">
-      <SectionTitle>Experiences & Certifications</SectionTitle>
+      <SectionTitle>Experiences</SectionTitle>
       <div className="py-15 grid md:grid-cols-2 mt-10 gap-8">
         {/* Experience */}
         <div>

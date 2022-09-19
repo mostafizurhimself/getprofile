@@ -18,7 +18,7 @@ const AboutSection = (props: Props) => {
             height={140}
           />
         </div>
-        <div className="col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl shadow-lg">
+        <div className="col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white px-6 pt-8 pb-6 rounded-2xl shadow-lg">
           <div>
             <p className="text-justify">
               Hi, I am Md Mostafizur Rahman, I am a fullstack developer. I work
