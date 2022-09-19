@@ -15,7 +15,7 @@ const Menu = (props: Props) => {
       <div className="max-w-7xl mx-auto flex items-center px-4 md:px-6 h-16">
         <Link href="/">
           <a className="text-3xl  font-bold">
-            <span>Mostafizur</span>
+            <span>GetProfile</span>
             <span className="text-primary-500">.</span>
           </a>
         </Link>
@@ -106,7 +106,7 @@ const Menu = (props: Props) => {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white">
+            <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-[#f9f9ff]">
               <Transition.Child
                 as={Fragment}
                 enter="ease-in-out duration-300"
@@ -126,8 +126,16 @@ const Menu = (props: Props) => {
                   </button>
                 </div>
               </Transition.Child>
-              <div className="mt-5 flex-1 h-0 overflow-y-auto">
-                <nav className="px-2 space-y-1">
+              <div className="flex-1 h-0 overflow-y-auto">
+                <div className="px-2 border-b pb-4">
+                  <Link href="/">
+                    <a className="text-3xl  font-bold">
+                      <span>GetProfile</span>
+                      <span className="text-primary-500">.</span>
+                    </a>
+                  </Link>
+                </div>
+                <nav className="px-2 space-y-1 mt-4">
                   <Link href="/works">
                     <a
                       className={classNames(

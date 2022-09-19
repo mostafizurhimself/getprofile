@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { Dribbble, Facebook, GitHub, Instagram, Twitter } from "react-feather";
 import Button from "../form/Button";
@@ -17,11 +18,31 @@ const HeroSection = (props: Props) => {
         <h1 className="mt-4 text-3xl font-bold ">Mostafizur Rahman</h1>
         <p className="mt-2">I'm a Fullstack Developer</p>
         <div className="flex  mt-4">
-          <Instagram className="mx-3" />
-          <Twitter className="mx-3" />
-          <Facebook className="mx-3" />
-          <Dribbble className="mx-3" />
-          <GitHub className="mx-3" />
+          <Link href="https://www.instragram.com">
+            <a>
+              <Instagram className="mx-3" />
+            </a>
+          </Link>
+          <Link href="https://www.twitter.com">
+            <a>
+              <Twitter className="mx-3" />
+            </a>
+          </Link>
+          <Link href="https://www.facebook.com">
+            <a>
+              <Facebook className="mx-3" />
+            </a>
+          </Link>
+          <Link href="https://www.dribble.com">
+            <a>
+              <Dribbble className="mx-3" />
+            </a>
+          </Link>
+          <Link href="https://www.github.com">
+            <a>
+              <GitHub className="mx-3" />
+            </a>
+          </Link>
         </div>
         <Button className="px-8 bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-200 text-white font-semibold mt-5">
           Hire Me
