@@ -1,5 +1,3 @@
-import { Url } from "url";
-
 export type Experience = {
   jobTitle: string;
   company: string;
