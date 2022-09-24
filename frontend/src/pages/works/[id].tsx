@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const settings: Settings = {
   dots: false,
-  infinite: true,
+  infinite: false,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: false,

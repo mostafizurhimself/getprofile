@@ -1,67 +1,60 @@
-import Image from "next/image";
-import React from "react";
-import Button from "@/components/form/Button";
-import SectionTitle from "../shared/SectionTitle";
+import Button from '@/components/form/Button';
+import SectionTitle from '@/components/shared/SectionTitle';
+import { HiOutlineChartBar, HiOutlineFire, HiOutlineUsers } from 'react-icons/hi';
+import { RiOpenSourceLine } from 'react-icons/ri';
 
-interface Props {}
-
-const AboutSection = (props: Props) => {
+const AboutSection = () => {
   return (
     <div className="container py-6">
       <SectionTitle>About Me</SectionTitle>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 py-6">
-        <div className="overflow-hidden text-center md:text-left">
-          <Image
-            src="/images/man.png"
-            className="rounded-full"
-            width={140}
-            height={140}
-          />
+
+      <div className="grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:gap-8">
+        <div className="">
+          <p className="text-justify">
+            Hi, I am Md Mostafizur Rahman, I am a fullstack developer. I work from Dhaka, Bangladesh. I have rich
+            experience in building, designing & customizing website, web apps, mobile apps etc.
+          </p>
+          <Button className="mt-5 bg-primary-500 px-8 font-semibold text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-200">
+            Download CV
+          </Button>
         </div>
-        <div className="col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white px-6 pt-8 pb-6 rounded-2xl shadow-lg">
-          <div>
-            <p className="text-justify">
-              Hi, I am Md Mostafizur Rahman, I am a fullstack developer. I work
-              from Dhaka, Bangladesh. I have rich experience in building,
-              designing & customizing website, web apps, mobile apps etc.
-            </p>
-            <Button className="px-8 bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-200 text-white font-semibold mt-5">
-              Download CV
-            </Button>
+        <div className="grid grid-cols-2 gap-4 lg:-mt-4">
+          <div className="flex">
+            <div className="mr-5 text-gray-300">
+              <HiOutlineFire size={50} />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold">20+</h2>
+              <p className="mt-1">Projects Completed</p>
+            </div>
           </div>
-          <div>
-            <div className="mb-4">
-              <div className="mb-3 flex justify-between">
-                <h6 className="font-semibold">Backend</h6>
-                <p>85%</p>
-              </div>
-              <div className="w-full bg-gray-200 h-2 rounded-md overflow-hidden">
-                <div className="bg-blue-500 h-2" style={{ width: "85%" }}></div>
-              </div>
+          <div className="flex">
+            <div className="mr-5 text-gray-300">
+              <RiOpenSourceLine size={50} />
             </div>
-            <div className="mb-4">
-              <div className="mb-3 flex justify-between">
-                <h6 className="font-semibold">Frontend</h6>
-                <p>90%</p>
-              </div>
-              <div className="w-full bg-gray-200 h-2 rounded-md overflow-hidden">
-                <div
-                  className="bg-green-400 h-2"
-                  style={{ width: "90%" }}
-                ></div>
-              </div>
+            <div>
+              <h2 className="text-3xl font-bold">30+</h2>
+              <p className="mt-1">Opensouce Contribution</p>
             </div>
-            <div className="mb-4">
-              <div className="mb-3 flex justify-between">
-                <h6 className="font-semibold">UI/UX Design</h6>
-                <p>70%</p>
-              </div>
-              <div className="w-full bg-gray-200 h-2 rounded-md overflow-hidden">
-                <div
-                  className="bg-yellow-400 h-2"
-                  style={{ width: "70%" }}
-                ></div>
-              </div>
+          </div>
+
+          <div className="flex">
+            <div className="mr-5 text-gray-300">
+              <HiOutlineUsers size={50} />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold">15+</h2>
+              <p className="mt-1">Satisfied clients</p>
+            </div>
+          </div>
+
+          <div className="flex">
+            <div className="mr-5 text-gray-300">
+              <HiOutlineChartBar size={50} />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold">5+</h2>
+              <p className="mt-1">Years of experience</p>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
-import React from "react";
-import { Heart, MessageSquare } from "react-feather";
+import React from 'react';
+import { FiHeart, FiMessageSquare } from 'react-icons/fi';
 
 interface Comment {
   id: number | string;
@@ -18,20 +18,18 @@ const Comment = ({ comment }: Props) => {
   return (
     <div className="py-4">
       <div className="flex items-baseline">
-        <h4 className="font-bold text-lg">{comment.name}</h4>
+        <h4 className="text-lg font-bold">{comment.name}</h4>
         <time className="ml-2 text-xs text-gray-500">{comment.createdAt}</time>
       </div>
-      <div className="text-base space-y-6 text-gray-500 mt-2">
-        {comment.content}
-      </div>
+      <div className="mt-2 space-y-6 text-base text-gray-500">{comment.content}</div>
       <div className="mt-3 flex items-center">
         <button className="flex items-center text-gray-500">
-          <Heart className="h-4" />
+          <FiHeart className="h-4" />
           <span className="ml-1 text-sm">{comment.totalLikes} likes</span>
         </button>
 
         <button className="ml-4 flex items-center text-gray-500">
-          <MessageSquare className="h-4" />
+          <FiMessageSquare className="h-4" />
           <span className="ml-1 text-sm">{comment.totalReplies} replies</span>
         </button>
       </div>

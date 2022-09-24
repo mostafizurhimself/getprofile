@@ -11,10 +11,11 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.3.8",
-    "@strapi/plugin-users-permissions": "4.3.8",
     "@strapi/plugin-i18n": "4.3.8",
-    "better-sqlite3": "7.4.6"
+    "@strapi/plugin-users-permissions": "4.3.8",
+    "@strapi/strapi": "4.3.8",
+    "better-sqlite3": "7.4.6",
+    "strapi-plugin-wysiwsg-react-md-editor": "^4.2.0"
   },
   "author": {
     "name": "A Strapi developer"

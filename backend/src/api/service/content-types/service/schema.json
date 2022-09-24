@@ -26,6 +26,12 @@
       "type": "media",
       "multiple": false,
       "required": true
+    },
+    "works": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work.work",
+      "mappedBy": "service"
     }
   }
 }
