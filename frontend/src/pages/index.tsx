@@ -8,7 +8,6 @@ import ServiceSection from '@/components/partials/ServiceSection';
 import TestimonialSection from '@/components/partials/TestimonialSection';
 import AppLayout from '@/layouts/AppLayout';
 import type { NextPage } from 'next';
-// import lodash from "lodash";
 
 const Home: NextPage = () => {
   return (
