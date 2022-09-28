@@ -19,6 +19,28 @@
     "efficiency": {
       "type": "integer",
       "required": true
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "green",
+        "red",
+        "orange",
+        "amber",
+        "yellow",
+        "lime",
+        "emerald",
+        "teal",
+        "cyan",
+        "sky",
+        "blue",
+        "indigo",
+        "purple",
+        "fuchsia",
+        "pink",
+        "rose"
+      ],
+      "required": true
     }
   }
 }

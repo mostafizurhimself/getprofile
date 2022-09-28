@@ -3,8 +3,8 @@ import { experiences } from '@/data/experiences';
 import styles from '@/styles/modules/ExperienceSection.module.scss';
 import classNames from 'classnames';
 import { FiBriefcase } from 'react-icons/fi';
-import AcademicCap from '../icons/AcademicCap';
-import SectionTitle from '../shared/SectionTitle';
+import AcademicCap from '@/components/icons/AcademicCap';
+import SectionTitle from '@/components/shared/SectionTitle';
 
 const ExperienceSection = () => {
   return (
