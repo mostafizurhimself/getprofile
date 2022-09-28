@@ -1,30 +1,13 @@
-import { Service } from '@/types';
 import classNames from 'classnames';
 import Image from 'next/image';
 import React from 'react';
-import SectionTitle from '../shared/SectionTitle';
-
-const services: Service[] = [
-  {
-    name: 'Web Development',
-    description: 'Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.',
-    image: '/images/web-development.svg',
-  },
-  {
-    name: 'UI/UX Design',
-    description: 'Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.',
-    image: '/images/ui-ux.svg',
-  },
-  {
-    name: 'Mobile Application',
-    description: 'Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.',
-    image: '/images/mobile-app.png',
-  },
-];
+import SectionTitle from '@/components/shared/SectionTitle';
+import { services } from '@/data/services';
+import Link from 'next/link';
 
 const bgClasses = [
-  'bg-yellow-400',
   'bg-indigo-500 text-indigo-100',
+  'bg-yellow-400 text-yellow-900',
   'bg-pink-400 text-pink-900',
   'bg-purple-500 text-purple-100',
   'bg-green-500 text-green-100',
@@ -40,7 +23,7 @@ const getBackgroundClass = (index: number) => {
 
 const ServiceSection = () => {
   return (
-    <div className="container py-16">
+    <>
       <SectionTitle>Services</SectionTitle>
       <div className="mt-10 grid gap-8 md:grid-cols-3">
         {services.map((service, index) => (
@@ -48,16 +31,19 @@ const ServiceSection = () => {
             key={index}
             className={classNames('rounded-2xl py-8 px-4 text-center shadow-md md:px-8', getBackgroundClass(index))}
           >
-            <Image src={service.image} height={80} width={80} />
+            <Image src={service.image} height={80} width={80} alt={service.name} />
             <h4 className="mt-4 text-xl font-semibold">{service.name}</h4>
             <p className="mt-4">{service.description}</p>
           </div>
         ))}
       </div>
       <p className="mt-8 text-center">
-        Looking for a custom service? <a href="/contact">Click here to contact me! &#128079;</a>
+        Looking for a custom service?{' '}
+        <Link href="/contact">
+          <a>Click here to contact me! &#128079;</a>
+        </Link>
       </p>
-    </div>
+    </>
   );
 };
 

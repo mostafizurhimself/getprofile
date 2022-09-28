@@ -1,11 +1,12 @@
-.experience {
-      @apply relative border-l border-gray-200;
+.experience,
+.education {
+  @apply relative;
 
-      &-item {
-            @apply ml-6;
-      }
+  &-item {
+    @apply ml-7;
+  }
 
-      &-item:not(:last-child) {
-            @apply mb-10;
-      }
+  &-item:not(:last-child) {
+    @apply mb-10;
+  }
 }

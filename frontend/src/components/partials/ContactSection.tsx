@@ -1,56 +1,40 @@
-import Image from "next/image";
-import React from "react";
-import Button from "../form/Button";
-import SectionTitle from "../shared/SectionTitle";
+import Image from 'next/image';
+import React from 'react';
+import Button from '@/components/form/Button';
+import Input from '@/components/form/Input';
+import TextArea from '@/components/form/Textarea';
+import SectionTitle from '@/components/shared/SectionTitle';
 
-type Props = {};
-
-const ContactSection = (props: Props) => {
+const ContactSection = () => {
   return (
-    <div className="container py-16">
+    <>
       <SectionTitle>Get In Touch</SectionTitle>
-      <div className="mt-14 grid md:grid-cols-3 gap-6">
+      <div className="mt-14 grid gap-6 md:grid-cols-3">
         <div className="relative h-48">
-          <Image src="/images/map.svg" layout="fill" />
+          <Image src="/images/map.svg" layout="fill" className="dark:invert" alt="map" />
           <h6 className="text-2xl font-bold">Let's talk about everything!</h6>
           <p className="mt-2">Don't like forms? Send me an email. 👋</p>
         </div>
         <div className="col-span-2">
-          <div className="grid md:grid-cols-2 gap-8">
-            <input
-              className="w-full px-6 py-4 rounded-full outline-none focus:border focus:border-primary-500 focus:ring-2 focus:ring-primary-200 shadow-lg"
-              type="text"
-              placeholder="Your Name"
-            />
-            <input
-              className="w-full px-6 py-4 rounded-full outline-none focus:border focus:border-primary-500 focus:ring-2 focus:ring-primary-200 shadow-lg"
-              type="email"
-              placeholder="Email Address"
-            />
+          <div className="grid gap-8 md:grid-cols-2">
+            <Input placeholder="Your Name" />
+            <Input placeholder="Email Address" />
           </div>
 
           <div className="mt-8">
-            <input
-              className="w-full px-6 py-4 rounded-full outline-none focus:border focus:border-primary-500 focus:ring-2 focus:ring-primary-200 shadow-lg"
-              type="text"
-              placeholder="Subject"
-            />
+            <Input placeholder="Subject" />
           </div>
           <div className="mt-8">
-            <textarea
-              className="w-full px-6 py-4 rounded-3xl outline-none focus:border focus:border-primary-500 focus:ring-2 focus:ring-primary-200 shadow-lg"
-              placeholder="Message"
-              rows={5}
-            ></textarea>
+            <TextArea placeholder="Message" />
           </div>
           <div className="mt-8">
-            <Button className="px-8 bg-primary-500 hover:bg-primary-600 focus:ring-2 focus:ring-primary-200 text-white font-semibold mt-5">
+            <Button className="mt-5 bg-primary-500 px-8 font-semibold text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-200">
               Send Message
             </Button>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

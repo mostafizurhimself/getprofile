@@ -1,20 +1,22 @@
-import { Dialog, Transition } from '@headlessui/react';
+import { Theme, useTheme } from '@/hooks/use-theme';
+import { Dialog, Switch, Transition } from '@headlessui/react';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Fragment, useState } from 'react';
-
-type Props = {};
+import { BsMoonStars, BsSun } from 'react-icons/bs';
+import { HiMenuAlt3 } from 'react-icons/hi';
 
 const Menu = () => {
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   return (
-    <header className="header text-gray-700">
+    <header className="header text-gray-700 dark:text-gray-200">
       <div className="mx-auto flex h-16 max-w-7xl items-center px-4 md:px-6">
         <Link href="/">
           <a className="text-3xl  font-bold">
-            <span>Mostafizur</span>
+            <span>Pofology</span>
             <span className="text-primary-500">.</span>
           </a>
         </Link>
@@ -22,9 +24,12 @@ const Menu = () => {
           <li>
             <Link href="/works">
               <a
-                className={classNames('inline-block px-4 font-semibold  hover:text-primary-600 hover:underline', {
-                  'text-primary-500': router.asPath == '/works',
-                })}
+                className={classNames(
+                  'inline-block px-4 font-semibold  transition-colors duration-300 hover:text-primary-600 hover:underline',
+                  {
+                    'text-primary-500': router.asPath == '/works',
+                  }
+                )}
               >
                 Works
               </a>
@@ -33,9 +38,12 @@ const Menu = () => {
           <li>
             <Link href="/blog">
               <a
-                className={classNames('inline-block px-4 font-semibold  hover:text-primary-600 hover:underline', {
-                  'text-primary-500': router.asPath == '/blog',
-                })}
+                className={classNames(
+                  'inline-block px-4 font-semibold  transition-colors duration-150 hover:text-primary-600 hover:underline',
+                  {
+                    'text-primary-500': router.asPath == '/blog',
+                  }
+                )}
               >
                 Blog
               </a>
@@ -44,25 +52,31 @@ const Menu = () => {
           <li>
             <Link href="/contact">
               <a
-                className={classNames('inline-block px-4 font-semibold  hover:text-primary-600 hover:underline', {
-                  'text-primary-500': router.asPath == '/contact',
-                })}
+                className={classNames(
+                  'inline-block px-4 font-semibold  transition-colors duration-150 hover:text-primary-600 hover:underline',
+                  {
+                    'text-primary-500': router.asPath == '/contact',
+                  }
+                )}
               >
                 Contact
               </a>
             </Link>
           </li>
         </ul>
-        <button type="button" onClick={() => setSidebarOpen(!sidebarOpen)} className="ml-auto flex md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 "
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
+        <button
+          type="button"
+          className="ml-auto transition-colors duration-150 hover:text-primary-500 md:-mt-0.5 md:ml-3"
+          onClick={() => toggleTheme()}
+        >
+          {theme === Theme.LIGHT ? <BsMoonStars size={20} /> : <BsSun size={20} />}
+        </button>
+        <button
+          type="button"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className="ml-5 flex text-gray-700 dark:text-gray-200 md:hidden"
+        >
+          <HiMenuAlt3 size={24} />
         </button>
       </div>
 
@@ -89,7 +103,7 @@ const Menu = () => {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <div className="relative flex w-full max-w-xs flex-1 flex-col bg-[#f9f9ff] pt-5 pb-4">
+            <div className="relative flex h-full w-full max-w-xs flex-1 flex-col bg-[#f9f9ff] pt-5 dark:bg-gray-800">
               <Transition.Child
                 as={Fragment}
                 enter="ease-in-out duration-300"
@@ -109,11 +123,11 @@ const Menu = () => {
                   </button>
                 </div>
               </Transition.Child>
-              <div className="h-0 flex-1 overflow-y-auto">
-                <div className="border-b px-2 pb-4">
+              <div className="flex h-full flex-col overflow-y-auto">
+                <div className="border-b px-2 pb-4 dark:border-gray-700">
                   <Link href="/">
                     <a className="text-3xl  font-bold">
-                      <span>Mostafizur</span>
+                      <span>Pofology</span>
                       <span className="text-primary-500">.</span>
                     </a>
                   </Link>
@@ -122,7 +136,7 @@ const Menu = () => {
                   <Link href="/works">
                     <a
                       className={classNames(
-                        'group flex items-center px-2 py-2 text-base font-medium hover:text-primary-600',
+                        'group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600',
                         { 'text-primary-500': router.asPath == '/works' }
                       )}
                     >
@@ -133,7 +147,7 @@ const Menu = () => {
                     <a
                       className={classNames(
                         { 'text-primary-500': router.asPath == '/blog' },
-                        'group flex items-center px-2 py-2 text-base font-medium hover:text-primary-600'
+                        'group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600'
                       )}
                     >
                       Blog
@@ -143,7 +157,7 @@ const Menu = () => {
                     <a
                       className={classNames(
                         { 'text-primary-500': router.asPath == '/contact' },
-                        'group flex items-center px-2 py-2 text-base font-medium hover:text-primary-600'
+                        'group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600 '
                       )}
                     >
                       Contact

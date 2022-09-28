@@ -13,13 +13,27 @@ const Home: NextPage = () => {
   return (
     <AppLayout title="Home">
       <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <ServiceSection />
-      <RecentWorkSection />
-      <TestimonialSection />
-      <BlogSection />
-      <ContactSection />
+      <section className="container pt-20 pb-10">
+        <AboutSection />
+      </section>
+      <section className="container py-16">
+        <ExperienceSection />
+      </section>
+      <section className="container py-16">
+        <ServiceSection />
+      </section>
+      <section className="container py-16">
+        <RecentWorkSection />
+      </section>
+      <section className="container py-16">
+        <TestimonialSection />
+      </section>
+      <section className="container py-16">
+        <BlogSection />
+      </section>
+      <section className="container py-16">
+        <ContactSection />
+      </section>
     </AppLayout>
   );
 };

@@ -9,6 +9,7 @@
       {
         "allowTemplateLiterals": true
       }
-    ]
+    ],
+    "react/no-unescaped-entities": "off"
   }
 }

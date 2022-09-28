@@ -7,6 +7,7 @@ module.exports = {
     "./src/layouts/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     screens: {
       'xs': '475px',
@@ -29,6 +30,18 @@ module.exports = {
           "800": "#b33543",
           "900": "#992e3a"
         },
+        // primary: {
+        //   "50": "#e8f9f1",
+        //   "100": "#77d9ab",
+        //   "200": "#61d29d",
+        //   "300": "#4acc8f",
+        //   "400": "#34c581",
+        //   "500": "#1dbf73",
+        //   "600": "#1aac68",
+        //   "700": "#17995c",
+        //   "800": "#148651",
+        //   "900": "#117345",
+        // },
         indigo: {
           "overlay": "rgba(99,102,241, 0.8)"
         }

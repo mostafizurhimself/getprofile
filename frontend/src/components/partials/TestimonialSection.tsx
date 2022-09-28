@@ -1,9 +1,8 @@
-import Image from "next/image";
-import React from "react";
-import Slider, { Settings } from "react-slick";
-import SectionTitle from "../shared/SectionTitle";
-
-type Props = {};
+import { reviews } from '@/data/reviews';
+import Image from 'next/image';
+import React from 'react';
+import Slider, { Settings } from 'react-slick';
+import SectionTitle from '../shared/SectionTitle';
 
 const reviewSettings: Settings = {
   dots: true,
@@ -11,123 +10,34 @@ const reviewSettings: Settings = {
   speed: 1000,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: false,
-  arrows: false,
-};
-
-const clientSettings: Settings = {
-  dots: false,
-  infinite: true,
-  speed: 2500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
   autoplay: true,
   arrows: false,
 };
-
-const Testimonial = (props: Props) => {
+const Testimonial = () => {
   return (
-    <div className="container py-16">
-      <SectionTitle>Clients & Reviews</SectionTitle>
+    <>
+      <SectionTitle>Client Reviews</SectionTitle>
       <div className="mt-16">
         <Slider {...reviewSettings}>
-          <div className="mb-6">
-            <div className="flex flex-col items-center">
-              <div className="w-24 h-24 rounded-full">
-                <Image src="/images/client-1.png" height={100} width={100} />
-              </div>
-              <h6 className="font-semibold mt-3 text-lg">John Doe</h6>
-              <p className="text-gray-400 text-sm">
-                General Manager at Easy Fashion Ltd.
-              </p>
-              <div className="bg-white shadow-lg rounded-2xl max-w-2xl p-8 mt-6 text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur labore similique quas fuga ad doloremque natus iste
-                modi numquam sapiente esse tenetur, ipsam, nisi vitae et vero,
-                ducimus dolorem est! Good luck! 🔥
-              </div>
-            </div>
-          </div>
-          <div className="mb-6">
-            <div className="flex flex-col items-center">
-              <div className="w-24 h-24 rounded-full">
-                <Image src="/images/client-2.png" height={100} width={100} />
-              </div>
-              <h6 className="font-semibold mt-3 text-lg">Naveed Ali</h6>
-              <p className="text-gray-400 text-sm">
-                Project Manager at Sozashop
-              </p>
-              <div className="bg-white shadow-lg rounded-2xl max-w-2xl p-8 mt-6 text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur labore similique quas fuga ad doloremque natus iste
-                modi numquam sapiente esse tenetur, ipsam, nisi vitae et vero,
-                ducimus dolorem est! Good luck! 🔥
+          {reviews.map((review, index) => (
+            <div className="mb-6" key={index}>
+              <div className="flex flex-col items-center">
+                <div className="h-24 w-24 rounded-full">
+                  <Image src={review.author.imageUrl} height={100} width={100} alt={review.author.name} />
+                </div>
+                <h6 className="mt-3 text-lg font-semibold">{review.author.name}</h6>
+                <p className="text-sm text-gray-400 dark:text-gray-200">
+                  {review.author.designation} at {review.author.company}.
+                </p>
+                <div className="mt-6 max-w-2xl rounded-2xl bg-white p-8 text-gray-500 shadow-lg dark:bg-gray-700 dark:text-gray-200">
+                  {review.comment}
+                </div>
               </div>
             </div>
-          </div>
-          <div className="mb-6">
-            <div className="flex flex-col items-center">
-              <div className="w-24 h-24 rounded-full">
-                <Image src="/images/client-3.png" height={100} width={100} />
-              </div>
-              <h6 className="font-semibold mt-3 text-lg">Rizwan Mirza</h6>
-              <p className="text-gray-400 text-sm">Owner at Outchimp.inc</p>
-              <div className="bg-white shadow-lg rounded-2xl max-w-2xl p-8 mt-6 text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur labore similique quas fuga ad doloremque natus iste
-                modi numquam sapiente esse tenetur, ipsam, nisi vitae et vero,
-                ducimus dolorem est! Good luck! 🔥
-              </div>
-            </div>
-          </div>
+          ))}
         </Slider>
       </div>
-
-      {/* <div className="mt-16">
-        <Slider {...clientSettings}>
-          <div className="text-center">
-            <Image
-              src="/images/client-logo-1.png"
-              height={70}
-              width={250}
-              objectFit="contain"
-            />
-          </div>
-          <div className="text-center">
-            <Image
-              src="/images/client-logo-2.png"
-              height={70}
-              width={250}
-              objectFit="contain"
-            />
-          </div>
-          <div className="text-center">
-            <Image
-              src="/images/client-logo-3.png"
-              height={70}
-              width={250}
-              objectFit="contain"
-            />
-          </div>
-          <div className="text-center">
-            <Image
-              src="/images/client-logo-4.png"
-              height={70}
-              width={250}
-              objectFit="contain"
-            />
-          </div>
-          <div className="text-center">
-            <Image
-              src="/images/client-logo-5.png"
-              height={70}
-              width={250}
-              objectFit="contain"
-            />
-          </div>
-        </Slider>
-      </div> */}
-    </div>
+    </>
   );
 };
 

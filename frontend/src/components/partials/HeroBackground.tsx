@@ -25,16 +25,16 @@ const HeroBackground = () => {
       <FiCircle size={30} className="absolute bottom-20 left-16 animate-bounce text-amber-500 md:left-40" />
       <FiHexagon size={30} className="absolute top-96 left-1/4 animate-spin text-purple-500" />
       <ul className={styles.circles}>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li className="bg-primary-300"></li>
+        <li className="bg-purple-300"></li>
+        <li className="bg-indigo-300"></li>
+        <li className="bg-emerald-300"></li>
+        <li className="bg-teal-300"></li>
+        <li className="bg-pink-300"></li>
+        <li className="bg-blue-300"></li>
+        <li className="bg-orange-300"></li>
+        <li className="bg-yellow-300"></li>
+        <li className="bg-gray-200 dark:bg-gray-700"></li>
       </ul>
     </>
   );

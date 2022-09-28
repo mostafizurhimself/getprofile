@@ -1,32 +1,32 @@
 .portfolio {
-  @apply bg-white rounded-2xl shadow-lg text-center relative overflow-hidden;
+  @apply relative overflow-hidden rounded-2xl text-center shadow-lg;
 
   &:hover .portfolio-overlay {
     @apply opacity-100;
   }
 
   &-category {
-    @apply inline-block text-white text-sm bg-primary-500 whitespace-nowrap max-w-min px-4 py-2 rounded-b-lg transform opacity-90 -translate-y-full transition-all duration-300 ease-out;
+    @apply inline-block max-w-min -translate-y-full transform whitespace-nowrap rounded-b-lg bg-primary-500 px-4 py-2 text-sm text-white opacity-90 transition-all duration-300 ease-out;
   }
 
   &-title {
-    @apply text-white font-semibold text-xl mt-auto w-3/4 transform translate-y-full opacity-0 transition-all ease-out duration-500 hover:underline;
+    @apply mt-auto w-3/4 translate-y-full transform text-xl font-semibold text-white opacity-0 transition-all duration-500 ease-out hover:underline;
   }
 
   &-link {
-    @apply bg-yellow-400 w-10 h-10 rounded-full mt-auto flex items-center justify-center opacity-0 transition-opacity duration-700;
+    @apply mt-auto flex h-10 w-10 items-center justify-center rounded-full bg-yellow-400 opacity-0 transition-opacity duration-700;
   }
 
   &-overlay {
-    @apply text-left absolute h-full bg-indigo-overlay w-full top-0 left-0 px-8 pb-8 flex flex-col opacity-0 transition-opacity duration-500;
+    @apply absolute top-0 left-0 flex h-full w-full flex-col bg-indigo-overlay px-8 pb-8 text-left opacity-0 transition-opacity duration-500;
 
     &:hover {
       .portfolio-category {
-        @apply opacity-100 translate-y-0;
+        @apply translate-y-0 opacity-100;
       }
 
       .portfolio-title {
-        @apply opacity-100 translate-y-0;
+        @apply translate-y-0 opacity-100;
       }
 
       .portfolio-link {

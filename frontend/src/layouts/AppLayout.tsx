@@ -7,25 +7,30 @@ import { FiArrowUp } from 'react-icons/fi';
 
 interface Props {
   title?: string;
+  children: React.ReactNode;
 }
 
 const AppLayout: React.FC<Props> = ({ children, title }) => {
+  const pageTitle = title ? `${title} | Pofology` : 'Pofology';
   return (
     <>
       <Head>
-        <title>Mostafizur | {title}</title>
+        <title>
+          {pageTitle}
+        </title>
       </Head>
       <div className="flex min-h-screen flex-col">
         <ScrollToTop
           smooth
+          className="fixed bottom-16 right-8 z-10 cursor-pointer rounded-lg bg-primary-500 p-3 text-white transition-colors duration-150 hover:bg-primary-600 "
           component={
             <div className="flex justify-center">
-              <FiArrowUp className="hover:text-primary-500" />
+              <FiArrowUp />
             </div>
           }
         />
         <Menu />
-        <div className="mt-16 text-gray-700">{children}</div>
+        <div className="mt-16">{children}</div>
         <Footer />
       </div>
     </>
