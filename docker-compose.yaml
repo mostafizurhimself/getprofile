@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  portfolio_admin:
+    container_name: portfolio_admin
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_NAME: getprofile
+      DATABASE_HOST: getprofile_db
+      DATABASE_PORT: 5432
+      DATABASE_USERNAME: getprofile
+      DATABASE_PASSWORD: getprofile
+    volumes:
+      - ./backend:/srv/app
+    ports:
+      - "1337:1337"
+    depends_on:
+      - getprofile_db
+
+  getprofile_db:
+    image: postgres
+    container_name: getprofile_db
+    environment:
+      POSTGRES_DB: getprofile
+      POSTGRES_USER: getprofile
+      POSTGRES_PASSWORD: getprofile
+    volumes:
+      - ./data:/var/lib/postgresql/data
