@@ -4,7 +4,7 @@ services:
     container_name: portfolio_admin
     build:
       context: ./backend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     environment:
       DATABASE_CLIENT: postgres
       DATABASE_NAME: getprofile
