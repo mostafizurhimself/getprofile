@@ -25,8 +25,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-      - run: yarn
+        run: yarn
         working-directory: ./frontend
       - name: Build
-      - run: yarn build
+        run: yarn build
         working-directory: ./frontend
