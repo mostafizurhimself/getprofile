@@ -27,6 +27,6 @@ jobs:
       - name: Install dependencies
         run: yarn
         working-directory: ./frontend
-      - name: Build
+      - name: Frontend Build
         run: yarn build
         working-directory: ./frontend
