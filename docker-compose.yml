@@ -1,7 +1,7 @@
 version: "3.8"
 services:
-  portfolio_admin:
-    container_name: portfolio_admin
+  getprofile_admin:
+    container_name: getprofile_admin
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -12,6 +12,7 @@ services:
       DATABASE_PORT: 5432
       DATABASE_USERNAME: getprofile
       DATABASE_PASSWORD: getprofile
+      ADMIN_JWT_SECRET: MyAwesomeSecretKey
     volumes:
       - ./backend:/srv/app
     ports:
@@ -28,3 +29,16 @@ services:
       POSTGRES_PASSWORD: getprofile
     volumes:
       - ./data:/var/lib/postgresql/data
+
+  getprofile_frontend:
+    container_name: getprofile_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/srv/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - getprofile_admin
+      - getprofile_db

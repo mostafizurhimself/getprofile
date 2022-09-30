@@ -1,18 +1,8 @@
-export default {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
-  register(/*{ strapi }*/) {},
+import app from "./app";
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
-   */
-  bootstrap(/*{ strapi }*/) {},
-};
+const port = process.env.APP_PORT || 8000;
+
+// Boot the server.
+app.listen(port, () => {
+  console.log(`Listening on port ${port}...`);
+});
