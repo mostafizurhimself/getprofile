@@ -11,13 +11,11 @@ interface Props {
 }
 
 const AppLayout: React.FC<Props> = ({ children, title }) => {
-  const pageTitle = title ? `${title} | Pofology` : 'Pofology';
+  const pageTitle = title ? `${title} | GetProfile` : 'GetProfile';
   return (
     <>
       <Head>
-        <title>
-          {pageTitle}
-        </title>
+        <title>{pageTitle}</title>
       </Head>
       <div className="flex min-h-screen flex-col">
         <ScrollToTop
