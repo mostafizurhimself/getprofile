@@ -18,6 +18,7 @@
     "react-icons": "^4.4.0",
     "react-scroll-to-top": "^3.0.0",
     "react-slick": "^0.29.0",
+    "react-typed": "^1.2.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
