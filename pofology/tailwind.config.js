@@ -7,7 +7,7 @@ module.exports = {
     "./src/layouts/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'media',
+  darkMode: 'class', // or 'media'
   theme: {
     screens: {
       'xs': '475px',
