@@ -6,7 +6,7 @@ Demo live at: [https://pofology.mostafizur.dev/](https://pofology.mostafizur.dev
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmostafizurhimself%2Fgetprofile%2Fpofology)
 
-### Features
+## Features
 
 - Built on Typescript, NextJS and Tailwindcss
 - Light & Dark theme support
@@ -19,7 +19,7 @@ Demo live at: [https://pofology.mostafizur.dev/](https://pofology.mostafizur.dev
 - Easily Customizable
 - Reusable Components
 
-### How to use
+## How to use
 
 1. Install NodeJs
 
@@ -71,7 +71,7 @@ Now you can see the project running on [http://localhost:3000](http://localhost:
 
 _**NB: If you are using npm, then remove the `yarn.lock` file**_
 
-### Project Structure
+## Project Structure
 
 There are two main folders `public` & `src` and some other configuration related file in project root.
 
@@ -103,7 +103,7 @@ There are two main folders `public` & `src` and some other configuration related
     - app.scss → The main SCSS file which is loaded by the application
   - types → Type definations for the application
 
-#### Screenshots
+### Screenshots
 
 ![Pofology Dark](public/screenshot_01.png)
 ![Pofology Dark](public/screenshot_02.png)

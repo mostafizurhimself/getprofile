@@ -11,7 +11,7 @@ interface Props {
 }
 
 const AppLayout: React.FC<Props> = ({ children, title }) => {
-  const pageTitle = title ? `${title} | GetProfile` : 'GetProfile';
+  const pageTitle = title ? `${title} | Pofology` : 'Pofology';
   return (
     <>
       <Head>
