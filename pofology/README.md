@@ -2,7 +2,7 @@
 
 Pofology – is a personal portfolio template build with Typescript, NextJS and Tailwindcss. This template is designed for building beautiful personal portfolio website. It has a great customisable option. Fully responsive and looks great on any devices. This template contains custom made pages for your portfolios & blog posts. It’s suitable for designers, developers or freelancers who want to show their projects and services, share their thoughts and knowledge with their own platform. Finally it’s a clean & minimal design.
 
-Demo live at: [https://pofology.mostafizur.dev/](https://pofology.mostafizur.dev/)
+Demo live at: [https://pofology.bdlancers.com/](https://pofology.bdlancers.com/)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmostafizurhimself%2Fgetprofile%2Fpofology)
 
