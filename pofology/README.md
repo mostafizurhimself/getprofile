@@ -10,12 +10,9 @@ Demo live at: [https://pofology.bdlancers.com/](https://pofology.bdlancers.com/)
 
 - Built on Typescript, NextJS and Tailwindcss
 - Light & Dark theme support
-- Automatic detect theme from user device preference
 - Responsive in Any Device
 - Floating Menu on Mobile Devices
 - Integrated with React Icons
-- React 18.1+
-- Tailwindcss 3.x+
 - Easily Customizable
 - Reusable Components
 
