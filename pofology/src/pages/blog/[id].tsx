@@ -10,9 +10,7 @@ import { GetServerSideProps } from 'next';
 import { posts } from '@/data/posts';
 
 type Props = {
-  post: Post & {
-    author: string;
-  };
+  post: Post;
 };
 
 const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
@@ -24,14 +22,14 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
           <p className="mt-4 flex items-center text-gray-400">
             <span>{post.publishedAt}</span>
             <span className="mx-2 h-1.5 w-1.5 rounded-full bg-primary-500"></span>
-            <span>{post.author}</span>
+            <span>{post.authorName}</span>
           </p>
         </div>
         <div>
           <div className="mt-10 overflow-hidden rounded-xl">
             <Image src={post.imageUrl} height={720} width={1280} layout="responsive" alt={post.title} />
           </div>
-          <div className="mt-10">
+          <article className="prose mt-10 max-w-full prose-blockquote:my-8  prose-blockquote:border-l-4  prose-blockquote:border-primary-500  prose-blockquote:pl-6  prose-blockquote:text-xl  prose-blockquote:font-semibold prose-blockquote:not-italic dark:prose-invert">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
               tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
@@ -41,10 +39,10 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
               Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu, semper a, adipiscing
               nec
             </p>
-            <div className="my-8 border-l-4 border-primary-500 pl-6 text-xl font-semibold">
+            <blockquote>
               A rich text element can be used with static or dynamic content For static content, just drop it into any
               page
-            </div>
+            </blockquote>
             <p>
               Praesent ac sem eget est egestas volutpat. Aenean tellus metus, bibendum sed, posuere ac, mattis non,
               nunc. Curabitur suscipit suscipit tellus. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
@@ -56,7 +54,7 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
               nostra, per inceptos hymenaeos. Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus
               blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
             </p>
-          </div>
+          </article>
           <div className="mt-10  flex">
             <Link href="#">
               <a>
@@ -104,7 +102,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
           title: post.title,
           imageUrl: post.imageUrl,
           publishedAt: post.publishedAt,
-          author: 'John Doe',
+          authorName: 'John Doe',
         },
       },
     };
