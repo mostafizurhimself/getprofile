@@ -62,7 +62,7 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
           </ul>
         </div>
 
-        <div className="my-10 rounded-lg bg-gray-50 py-3 dark:bg-gray-700">
+        <div className="my-10 rounded-lg bg-gray-50 py-3 shadow-md dark:bg-gray-700">
           <table className="w-full">
             <tbody>
               {work.attributes.map((attribute, index) => (

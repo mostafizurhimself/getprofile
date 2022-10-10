@@ -45,7 +45,7 @@ export type Post = {
   thumbnailUrl: string;
   imageUrl: string;
   authorName: string;
-  // content: string;
+  content: string;
 };
 
 export type Review = {
