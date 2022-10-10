@@ -46,7 +46,28 @@ module.exports = {
           "overlay": "rgba(99,102,241, 0.8)"
         }
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.700'),
+            a: {
+              color: theme('colors.primary.500'),
+              '&:hover': {
+                color: theme('colors.primary.600'),
+              },
+            },
+            blockquote: {
+              color: theme('colors.gray.800'),
+              borderLeftColor: theme('colors.primary.500'),
+              fontSize: theme('fontSize.xl'),
+              fontStyle: 'not-italic',
+            }
+          }
+        }
+      })
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
