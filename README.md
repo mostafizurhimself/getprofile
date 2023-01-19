@@ -8,7 +8,7 @@ Get Profile – is a personal portfolio template bundle. Here you can find a lot
 
 | Template Name                    | Live Demo                                    | Deployment                                                                                                                                                           |
 | -------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Pofology](./pofology/README.md) | [Live Demo](https://pofology.bdlancers.com/) | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmostafizurhimself%2Fgetprofile%2Fpofology) |
+| [Pofology](./pofology/README.md) | [Live Demo](https://pofology.vercel.app/) | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmostafizurhimself%2Fgetprofile%2Fpofology) |
 
 ### Contribution
 
