@@ -35,24 +35,24 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
           ></article>
           <div className="mt-10  flex">
             <Link href="#">
-              <a>
-                <FiTwitter className="mr-3" />
-              </a>
+
+              <FiTwitter className="mr-3" />
+
             </Link>
             <Link href="#">
-              <a>
-                <FiFacebook className="mx-3" />
-              </a>
+
+              <FiFacebook className="mx-3" />
+
             </Link>
             <Link href="#">
-              <a>
-                <FiLinkedin className="mx-3" />
-              </a>
+
+              <FiLinkedin className="mx-3" />
+
             </Link>
             <Link href="#">
-              <a>
-                <FiMail className="mx-3" />
-              </a>
+
+              <FiMail className="mx-3" />
+
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8">

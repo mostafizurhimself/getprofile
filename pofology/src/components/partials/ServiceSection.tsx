@@ -22,29 +22,27 @@ const getBackgroundClass = (index: number) => {
 };
 
 const ServiceSection = () => {
-  return (
-    <>
-      <SectionTitle>Services</SectionTitle>
-      <div className="mt-10 grid gap-8 md:grid-cols-3">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className={classNames('rounded-2xl py-8 px-4 text-center shadow-md md:px-8', getBackgroundClass(index))}
-          >
-            <Image src={service.image} height={80} width={80} alt={service.name} />
-            <h4 className="mt-4 text-xl font-semibold">{service.name}</h4>
-            <p className="mt-4">{service.description}</p>
-          </div>
-        ))}
-      </div>
-      <p className="mt-8 text-center">
-        Looking for a custom service?{' '}
-        <Link href="/contact">
-          <a>Click here to contact me! &#128079;</a>
-        </Link>
-      </p>
-    </>
-  );
+  return <>
+    <SectionTitle>Services</SectionTitle>
+    <div className="mt-10 grid gap-8 md:grid-cols-3">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className={classNames('rounded-2xl py-8 px-4 text-center shadow-md md:px-8', getBackgroundClass(index))}
+        >
+          <Image src={service.image} height={80} width={80} alt={service.name} />
+          <h4 className="mt-4 text-xl font-semibold">{service.name}</h4>
+          <p className="mt-4">{service.description}</p>
+        </div>
+      ))}
+    </div>
+    <p className="mt-8 text-center">
+      Looking for a custom service?{' '}
+      <Link href="/contact">
+        Click here to contact me! &#128079;
+      </Link>
+    </p>
+  </>;
 };
 
 export default ServiceSection;

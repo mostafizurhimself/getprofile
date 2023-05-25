@@ -45,8 +45,8 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
             ))}
           </Slider>
           <div className="mt-6 flex justify-center">
-            <Link href={work.previewUrl}>
-              <a className="btn">Live Preview</a>
+            <Link href={work.previewUrl} className="btn">
+              Live Preview
             </Link>
           </div>
         </div>
@@ -78,10 +78,12 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
         <div className="mb-10 flex h-48 flex-col items-center justify-center">
           <h2 className="text-4xl font-semibold">Want to Build a project like this?</h2>
           <p className="mt-4">I can design and develop beautiful websites, apps for you</p>
-          <Link href="/contact">
-            <a className="mt-5 rounded-full bg-primary-500 px-8 py-2 font-semibold tracking-wide text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-200">
+          <Link
+            href="/contact"
+            className="mt-5 rounded-full bg-primary-500 px-8 py-2 font-semibold tracking-wide text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-200">
+            
               Start a project
-            </a>
+            
           </Link>
         </div>
       </div>

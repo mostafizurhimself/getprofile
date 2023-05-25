@@ -21,8 +21,8 @@ const PageTitle: React.FunctionComponent<Props> = ({ children, breadcrumb = [] }
           return (
             <div key={index}>
               {item.path && (
-                <Link href={item.path}>
-                  <a className="">{item.label}</a>
+                <Link href={item.path} className="">
+                  {item.label}
                 </Link>
               )}
 
