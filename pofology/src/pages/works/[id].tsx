@@ -2,7 +2,7 @@ import { works } from '@/data/works';
 import AppLayout from '@/layouts/AppLayout';
 import { Work } from '@/types';
 import { GetServerSideProps } from 'next';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import Slider, { Settings } from 'react-slick';
 

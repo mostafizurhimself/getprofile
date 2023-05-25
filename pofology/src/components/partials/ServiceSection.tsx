@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import React from 'react';
 import SectionTitle from '@/components/shared/SectionTitle';
 import { services } from '@/data/services';

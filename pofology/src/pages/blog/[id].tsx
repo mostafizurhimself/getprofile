@@ -1,6 +1,6 @@
 import AppLayout from '@/layouts/AppLayout';
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
 import CommentBox from '@/components/partials/CommentBox';

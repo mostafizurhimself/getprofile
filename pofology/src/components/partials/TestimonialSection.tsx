@@ -1,5 +1,5 @@
 import { reviews } from '@/data/reviews';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import React from 'react';
 import Slider, { Settings } from 'react-slick';
 import SectionTitle from '../shared/SectionTitle';
