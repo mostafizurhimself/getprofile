@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import React from 'react';
 import { FiDribbble, FiFacebook, FiGithub, FiInstagram, FiTwitter } from 'react-icons/fi';
@@ -28,38 +28,33 @@ const HeroSection = () => {
         <div className="mt-4  flex gap-5">
           <Link
             href="https://www.instragram.com"
-            className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
-
+            className="text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-gray-300"
+          >
             <FiInstagram size={25} />
-
           </Link>
           <Link
             href="https://www.twitter.com"
-            className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
-
+            className="text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-gray-300"
+          >
             <FiTwitter size={25} />
-
           </Link>
           <Link
             href="https://www.facebook.com"
-            className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
-
+            className="text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-gray-300"
+          >
             <FiFacebook size={25} />
-
           </Link>
           <Link
             href="https://www.dribble.com"
-            className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
-
+            className="text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-gray-300"
+          >
             <FiDribbble size={25} />
-
           </Link>
           <Link
             href="https://www.github.com"
-            className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
-
+            className="text-gray-700 transition-colors duration-150 hover:text-primary-500 dark:text-gray-300"
+          >
             <FiGithub size={25} />
-
           </Link>
         </div>
         <Button className="mt-5 px-8">Hire Me</Button>
